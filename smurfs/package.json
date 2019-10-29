@@ -17,6 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "json-server": "json-server --watch server.json --port 3333",
+    "dev": "concurrently \"yarn start\" \"yarn run json-server\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -33,5 +35,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:3333"
 }
