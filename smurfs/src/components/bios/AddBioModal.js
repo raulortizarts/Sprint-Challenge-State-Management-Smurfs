@@ -12,7 +12,7 @@ const AddBioModal = ({ addBio }) => {
 
   const onSubmit = () => {
     if (message === '' || smurf === '') {
-      M.toast({ html: 'Please enter a message and smurf' });
+      M.toast({ html: 'Please enter a bio message and smurf name' });
     } else {
       const newBio = {
         message,

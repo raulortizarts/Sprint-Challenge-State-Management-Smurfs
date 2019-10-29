@@ -22,7 +22,7 @@ const SearchBar = ({ searchBio }) => {
               ref={text}
               onChange={onChange}
               />
-            <label className='label-icon' htmlfor='search'>
+            <label className='label-icon' htmlFor='search'>
               <i className='material-icons'>search</i>
             </label>
             <i className='material-icons'>close</i>
