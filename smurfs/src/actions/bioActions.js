@@ -25,7 +25,7 @@ import {
     } catch (err) {
       dispatch({
         type: BIO_ERROR,
-        payload: err.response.statusText
+        //payload: err.response.statusText
       });
     }
   };
@@ -51,7 +51,7 @@ import {
     } catch (err) {
       dispatch({
         type: BIO_ERROR,
-        payload: err.response.statusText
+        //payload: err.response.statusText
       });
     }
   };
@@ -72,7 +72,7 @@ import {
     } catch (err) {
       dispatch({
         type: BIO_ERROR,
-        payload: err.response.statusText
+       // payload: err.response.statusText
       });
     }
   };
