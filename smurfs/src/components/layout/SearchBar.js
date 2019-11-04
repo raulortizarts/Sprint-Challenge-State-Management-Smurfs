@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { searchBio } from '../../actions/bioActions';
 
 const SearchBar = ({ searchBio }) => {
-    const text = useRef('');
-  
-    const onChange = e => {
-      searchBio(text.current.value);
-    };
+  const text = useRef('');
 
-    return (
+  const onChange = e => {
+    searchBio(text.current.value);
+  };
+
+  return (
     <nav style={{ marginBottom: '30px' }} className='blue'>
       <div className='nav-wrapper'>
         <form>
@@ -18,10 +18,10 @@ const SearchBar = ({ searchBio }) => {
             <input
               id='search'
               type='search'
-              placeholder='Search Smurf..'
+              placeholder='Search Smurf Bio..'
               ref={text}
               onChange={onChange}
-              />
+            />
             <label className='label-icon' htmlFor='search'>
               <i className='material-icons'>search</i>
             </label>
@@ -34,10 +34,10 @@ const SearchBar = ({ searchBio }) => {
 };
 
 SearchBar.propTypes = {
-    searchBio: PropTypes.func.isRequired
-  };
-  
-  export default connect(
-    null,
-    { searchBio }
-  )(SearchBar);
+  searchBio: PropTypes.func.isRequired
+};
+
+export default connect(
+  null,
+  { searchBio }
+)(SearchBar);

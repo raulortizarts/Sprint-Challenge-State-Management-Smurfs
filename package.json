@@ -4,7 +4,7 @@
   "description": "Redux Sprint Challenge",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "yarn run json-server --watch db.json --port 3333"
   },
   "repository": {
     "type": "git",

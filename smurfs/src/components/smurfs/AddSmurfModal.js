@@ -1,4 +1,3 @@
-  
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -18,8 +17,9 @@ const AddSmurfModal = ({ addSmurf }) => {
         lastName
       });
 
-      M.toast({ html: `${firstName} ${lastName} added as new resident` });
+      M.toast({ html: `${firstName} ${lastName} was added as a smurf` });
 
+      // Clear Fields
       setFirstName('');
       setLastName('');
     }

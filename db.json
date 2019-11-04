@@ -1,0 +1,54 @@
+{
+  "bio": [
+    {
+      "id": 1,
+      "biography": "Became a mercenary.",
+      "attention": true,
+      "smurf": "Slade Wilson",
+      "date": "2019-11-03T23:12:49.932Z"
+    },
+    {
+      "id": 2,
+      "biography": "Made fun of Slade.",
+      "attention": false,
+      "smurf": "Wade Wilson",
+      "date": "2019-11-03T23:07:55.890Z"
+    },
+    {
+      "id": 3,
+      "biography": "He died in 2019.",
+      "attention": false,
+      "smurf": "John Doe",
+      "date": "2019-11-03T23:06:26.492Z"
+    },
+    {
+      "biography": "Became a Lambda student.",
+      "attention": true,
+      "smurf": "Raul Ortiz",
+      "date": "2019-11-04T00:16:11.414Z",
+      "id": 4
+    }
+  ],
+  "smurfs": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "firstName": "Slade",
+      "lastName": "Wilson"
+    },
+    {
+      "id": 3,
+      "firstName": "Wade",
+      "lastName": "Wilson"
+    },
+    {
+      "firstName": "Raul",
+      "lastName": "Ortiz",
+      "id": 4
+    }
+  ]
+}

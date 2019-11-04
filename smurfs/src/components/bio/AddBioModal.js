@@ -6,16 +6,16 @@ import { addBio } from '../../actions/bioActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 const AddBioModal = ({ addBio }) => {
-  const [message, setMessage] = useState('');
+  const [biography, setMessage] = useState('');
   const [attention, setAttention] = useState(false);
   const [smurf, setSmurf] = useState('');
 
   const onSubmit = () => {
-    if (message === '' || smurf === '') {
-      M.toast({ html: 'Please enter a bio message and smurf name' });
+    if (biography === '' || smurf === '') {
+      M.toast({ html: 'Please enter a biography and smurf' });
     } else {
       const newBio = {
-        message,
+        biography,
         attention,
         smurf,
         date: new Date()
@@ -25,6 +25,7 @@ const AddBioModal = ({ addBio }) => {
 
       M.toast({ html: `Bio added by ${smurf}` });
 
+      // Clear Fields
       setMessage('');
       setSmurf('');
       setAttention(false);
@@ -34,17 +35,17 @@ const AddBioModal = ({ addBio }) => {
   return (
     <div id='add-bio-modal' className='modal' style={modalStyle}>
       <div className='modal-content'>
-        <h4>Enter Bio</h4>
+        <h4>Create Smurf Biography</h4>
         <div className='row'>
           <div className='input-field'>
             <input
               type='text'
-              name='message'
-              value={message}
+              name='biography'
+              value={biography}
               onChange={e => setMessage(e.target.value)}
             />
-            <label htmlFor='message' className='active'>
-              Bio Message
+            <label htmlFor='biography' className='active'>
+              Enter Biography
             </label>
           </div>
         </div>
@@ -76,7 +77,7 @@ const AddBioModal = ({ addBio }) => {
                   value={attention}
                   onChange={e => setAttention(!attention)}
                 />
-                <span>Needs Attention</span>
+                <span>Needs Review</span>
               </label>
             </p>
           </div>

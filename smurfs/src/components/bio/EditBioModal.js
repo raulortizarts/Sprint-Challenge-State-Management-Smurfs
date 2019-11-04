@@ -6,25 +6,25 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import { updateBio } from '../../actions/bioActions';
 
 const EditBioModal = ({ current, updateBio }) => {
-  const [message, setMessage] = useState('');
+  const [biography, setBiography] = useState('');
   const [attention, setAttention] = useState(false);
   const [smurf, setSmurf] = useState('');
 
   useEffect(() => {
     if (current) {
-      setMessage(current.message);
+      setBiography(current.biography);
       setAttention(current.attention);
       setSmurf(current.smurf);
     }
   }, [current]);
 
   const onSubmit = () => {
-    if (message === '' || smurf === '') {
-      M.toast({ html: 'Please enter a message and smurf' });
+    if (biography === '' || smurf === '') {
+      M.toast({ html: 'Please enter smurf and biography' });
     } else {
       const updBio = {
         id: current.id,
-        message,
+        biography,
         attention,
         smurf,
         date: new Date()
@@ -33,7 +33,8 @@ const EditBioModal = ({ current, updateBio }) => {
       updateBio(updBio);
       M.toast({ html: `Bio updated by ${smurf}` });
 
-      setMessage('');
+      // Clear Fields
+      setBiography('');
       setSmurf('');
       setAttention(false);
     }
@@ -42,14 +43,14 @@ const EditBioModal = ({ current, updateBio }) => {
   return (
     <div id='edit-bio-modal' className='modal' style={modalStyle}>
       <div className='modal-content'>
-        <h4>Enter Bio</h4>
+        <h4>Enter Smurf Biography</h4>
         <div className='row'>
           <div className='input-field'>
             <input
               type='text'
-              name='message'
-              value={message}
-              onChange={e => setMessage(e.target.value)}
+              name='biography'
+              value={biography}
+              onChange={e => setBiography(e.target.value)}
             />
           </div>
         </div>

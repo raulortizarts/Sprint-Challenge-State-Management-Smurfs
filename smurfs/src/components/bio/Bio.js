@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import BioItem from './BioItem';
+import Preloader from '../layout/Preloader';
 import PropTypes from 'prop-types';
 import { getBio } from '../../actions/bioActions';
 
@@ -11,18 +12,18 @@ const Bio = ({ bio: { bio, loading }, getBio }) => {
   }, []);
 
   if (loading || bio === null) {
-    return <h4>Loading...</h4>;
+    return <Preloader />;
   }
 
   return (
     <ul className='collection with-header'>
       <li className='collection-header'>
-        <h4 className='center'>Bio</h4>
+        <h4 className='center'>Smurf Biography</h4>
       </li>
       {!loading && bio.length === 0 ? (
         <p className='center'>No bio to show...</p>
       ) : (
-        bio.map(bio=> <BioItem bio={bio} key={bio.id} />)
+        bio.map(bio => <BioItem bio={bio} key={bio.id} />)
       )}
     </ul>
   );

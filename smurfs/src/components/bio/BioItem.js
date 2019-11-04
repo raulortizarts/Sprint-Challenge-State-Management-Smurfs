@@ -22,11 +22,11 @@ const BioItem = ({ bio, deleteBio, setCurrent }) => {
           }`}
           onClick={() => setCurrent(bio)}
         >
-          {bio.message}
+          {bio.biography}
         </a>
         <br />
         <span className='grey-text'>
-          <span className='black-text'>ID #{bio.id}</span> last updated by{' '}
+          <span className='black-text'>Item #{bio.id}</span> last updated by{' '}
           <span className='black-text'>{bio.smurf}</span> on{' '}
           <Moment format='MMMM Do YYYY, h:mm:ss a'>{bio.date}</Moment>
         </span>
