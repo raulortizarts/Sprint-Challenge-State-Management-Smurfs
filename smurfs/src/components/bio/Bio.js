@@ -18,10 +18,10 @@ const Bio = ({ bio: { bio, loading }, getBio }) => {
   return (
     <ul className='collection with-header'>
       <li className='collection-header'>
-        <h4 className='center'>Smurf Biography</h4>
+        <h4 className='center'>Smurf Biographical Log</h4>
       </li>
       {!loading && bio.length === 0 ? (
-        <p className='center'>No bio to show...</p>
+        <p className='center'>No bios to show...</p>
       ) : (
         bio.map(bio => <BioItem bio={bio} key={bio.id} />)
       )}
