@@ -1,0 +1,14 @@
+export const GET_BIO = 'GET_BIO';
+export const ADD_BIO = 'ADD_BIO';
+export const DELETE_BIO = 'DELETE_BIO';
+export const SET_CURRENT = 'SET_CURRENT';
+export const CLEAR_CURRENT = 'CLEAR_CURRENT';
+export const UPDATE_BIO = 'UPDATE_BIO';
+export const CLEAR_BIO = 'CLEAR_BIO';
+export const SET_LOADING = 'SET_LOADING';
+export const BIO_ERROR = 'BIO_ERROR';
+export const SEARCH_BIO = 'SEARCH_BIO';
+export const GET_SMURFS = 'GET_SMURFS';
+export const ADD_SMURF = 'ADD_SMURF';
+export const DELETE_SMURF = 'DELETE_SMURF';
+export const SMURFS_ERROR = 'SMURFS_ERROR';
